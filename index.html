@@ -18,24 +18,38 @@
             <h1 class="text-center mt-5">Money Mine</h1>
             
             <div class="row">
-                <div class="col-8 a">
-                    <img  src="images/9017 (1).jpg" class="img-fluid img-thumbnail" alt="moneyimage">
+                <div class="col-8 col-sm-">
+                    <img  src="images/9017 (2).jpg" class="img-fluid " alt="moneyimage">
                 </div>
 
-                <div class="col-4">
+                <div class="col-4 col-sm-">
+                    <!-- income part -->
+                   <div>
                     <h3 class="text-center">Income</h3>
-                    <p class="ms-1">Income : <input  type="text"></p>
+                    <p class="ms-1">Income : <input id="income-input" type="text"></p>
+                   </div>
+                  <!-- exprenses part -->
+                    <div>
                     <h3 class="text-center">Expenses</h3>
-                    <p class="ms-4">Food: <input type="text"></p>
-                    <p class="ms-4">Rent : <input type="text"></p>
-                    <p class="ms-1">Clothes : <input type="text"></p>
-                    <button type="button" class="btn btn-primary btn-lg ms-5 mb-3">Calculate</button>
+                    <p class="ms-4">Food: <input id="expenses-food-input" type="text"></p>
+                    <p class="ms-4">Rent : <input id="expenses-rent-input" type="text"></p>
+                    <p class="ms-1">Clothes : <input id="expenses-clothes-input" type="text"></p>
+                    <button id="calculate-button" type="button" class="btn btn-primary btn-lg ms-5 mb-3">Calculate</button>
+                    </div>
+                      <!-- Total exprenses and balance part -->
+                   <div>
+                    <p  class="fs-5 fw-bold">Total Expenses: <span id="calculate-total-expenses"></span> </p>
+                    <p class="fs-5 fw-bold">Balance: <span id="total-balance"></span> </p>
+                   </div>
+                   <!-- saving parsent part -->
 
-                   <!-- <p class="fs-5 fw-bold">Total Expenses: <input type="text"></p>
-                   <p class="fs-5 fw-bold">Balance: <input type="text"></p>
                    <p>Save: <input type="text"> % <button type="button" class="btn btn-primary">Save</button></p>
-                   <p class="fs-5 fw-bold">Saving Amount: <input type="text"></p>
-                   <p class="fs-5 fw-bold">Remaining Balance: <input type="text"></p> -->
+
+                   <!-- saving and remaining balance part -->
+                   <div>
+                    <p class="fs-5 fw-bold">Saving Amount: </p>
+                    <p class="fs-5 fw-bold">Remaining Balance: </p>
+                   </div>
                     
                 </div>
             </div>
