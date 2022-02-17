@@ -21,6 +21,7 @@ document.getElementById('calculate-button').addEventListener('click',function(){
 
     // total value
    const  calculateTotalExpensesvalue = expensesClothesInputValue + expensesRentRnputValue + expensesFoodInputValue;
+    // error handaling
    if(incomeUserInputValue > calculateTotalExpensesvalue){
     const calculateExpensesText = document.getElementById('calculate-total-expenses');
     calculateExpensesText.innerText = calculateTotalExpensesvalue;
@@ -40,7 +41,7 @@ document.getElementById('calculate-button').addEventListener('click',function(){
    
     const incomeUserInputValue = getInputValue('income-input'); 
     
-// save part
+    // save part
     const saveInputFieldText = document.getElementById('save-input-field');
     const saveInputFieldValue =  parseFloat(saveInputFieldText.value);
     
@@ -60,17 +61,17 @@ document.getElementById('calculate-button').addEventListener('click',function(){
     
 
     const totalBalanceText = document.getElementById('total-balance');
-   const balanceAmount = incomeUserInputValue - calculateTotalExpensesvalue ;
+    const balanceAmount = incomeUserInputValue - calculateTotalExpensesvalue ;
 
-  
+    //   error handaling
    if(balanceAmount > saveAmount){
     savingAmountText.innerText = saveAmount;
     remainingBalance.innerText =(parseFloat(balanceAmount) - saveAmount) ;
     
 }
-else{
-    const failBalance = document.getElementById('balance-error');
-    failBalance.style.display = 'block';
-}
+    else{
+        const failBalance = document.getElementById('balance-error');
+        failBalance.style.display = 'block';
+    }
 
 });
