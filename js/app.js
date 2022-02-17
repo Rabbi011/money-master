@@ -29,7 +29,8 @@ document.getElementById('calculate-button').addEventListener('click',function(){
    totalBalanceText.innerText = balanceAmount ;
    }
    else{
-
+         const fail = document.getElementById('error');
+         fail.style.display = 'block';
    }
 
  
@@ -62,13 +63,14 @@ document.getElementById('calculate-button').addEventListener('click',function(){
    const balanceAmount = incomeUserInputValue - calculateTotalExpensesvalue ;
 
   
-   if(incomeUserInputValue > calculateTotalExpensesvalue && balanceAmount > saveAmount){
+   if(balanceAmount > saveAmount){
     savingAmountText.innerText = saveAmount;
     remainingBalance.innerText =(parseFloat(balanceAmount) - saveAmount) ;
     
 }
 else{
-    
+    const failBalance = document.getElementById('balance-error');
+    failBalance.style.display = 'block';
 }
 
 });
